@@ -15,6 +15,7 @@ session_start();
             if(mysqli_fetch_assoc($result))
             {
                 $_SESSION['User']=$_POST['UName'];
+                mysql_close($con);
                 header("location:wellcome.php");
             }
             else
